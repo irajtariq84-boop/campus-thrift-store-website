@@ -39,7 +39,21 @@ Campus-Thrift-Store-Website
 
 ## Screenshots
 
-Project screenshots are available inside the **Screenshots** folder.
+## 🏠 Home Page
+
+![Home Page](Screenshots/HomePage1.png)
+
+## 🛍️ Items Page
+
+![Items Page](Screenshots/MarketPlacePage1.png)
+
+## 💰 Sell Page
+
+![Sell Page](Screenshots/SellPage1.png)
+
+## 📞 Contact Page
+
+![Contact Page](Screenshots/ContactPage1.png)
 
 ## Academic Information
 
