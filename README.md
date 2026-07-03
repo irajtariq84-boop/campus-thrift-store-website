@@ -34,7 +34,6 @@ Campus-Thrift-Store-Website
 ├── thriftlogo.png
 ├── Screenshots/
 ├── AICT Final Project Report.pdf
-├── Campus Thrift Store Web Application Demo.mp4
 └── Sitemap.pdf
 ```
 
