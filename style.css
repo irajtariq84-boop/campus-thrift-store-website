@@ -1,0 +1,753 @@
+/* ===== GLOBAL ===== */ 
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+} 
+
+body { 
+    background: #ffffff; 
+    color: #1a1a1a; 
+    line-height: 1.6;
+} 
+
+a { 
+    text-decoration: none; 
+    color: inherit;
+} 
+
+/* ===== NAVBAR ===== */ 
+.navbar { 
+    background: #ffffff; 
+    padding: 20px 60px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    border-bottom: 1px solid #eee;
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+} 
+
+.logo img { 
+    height: 45px; 
+    filter: grayscale(1);
+} 
+
+.nav-links { 
+    list-style: none; 
+    display: flex; 
+    gap: 40px; 
+} 
+
+.nav-links a { 
+    color: #888; 
+    font-weight: 500; 
+    font-size: 0.85rem; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease; 
+} 
+
+.nav-links a:hover, .nav-links a.active { 
+    color: #000; 
+} 
+
+.nav-links a.active::after { 
+    content: ""; 
+    position: absolute; 
+    bottom: -5px; 
+    left: 0; 
+    width: 100%; 
+    height: 1.5px; 
+    background: #000; 
+} 
+
+/* ===== HERO ===== */ 
+.hero { 
+    height: 80vh; 
+    background: #111;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+    padding: 0; 
+} 
+
+.hero-img { 
+    position: absolute; 
+    inset: 0; 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    opacity: 0.6;
+} 
+
+.hero-content { 
+    position: relative; 
+    z-index: 1; 
+    background: transparent;
+    color: #fff; 
+} 
+
+.hero-content h1 { 
+    color: #fff; 
+    font-size: 6rem; 
+    font-weight: 900; 
+    letter-spacing: -3px;
+    text-transform: uppercase;
+    line-height: 0.9;
+} 
+
+.hero-content p { 
+    font-size: 1.1rem; 
+    margin-top: 20px; 
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: 300;
+} 
+
+/* ===== SECTIONS ===== */ 
+.section { 
+    padding: 100px 40px; 
+    text-align: center; 
+} 
+
+.section.light { background: #fff; } 
+
+/* ===== CATEGORIES ===== */ 
+.categories { 
+    display: flex; 
+    gap: 15px; 
+    padding: 40px 0; 
+    overflow-x: auto;
+    scrollbar-width: none;
+} 
+
+.category { 
+    width: 400px; 
+    flex-shrink: 0; 
+    position: relative;
+} 
+
+.category img { 
+    width: 100%; 
+    height: 550px; 
+    object-fit: cover; 
+    border-radius: 0; 
+    transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+} 
+
+.category:hover img {
+    transform: scale(1.02);
+}
+
+.category p { 
+    margin-top: 20px; 
+    font-size: 0.9rem; 
+    font-weight: 700; 
+    text-transform: uppercase;
+    letter-spacing: 2px;
+} 
+
+/* ===== PRODUCTS ===== */ 
+.products { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    gap: 50px 20px; 
+    padding: 0 40px; 
+} 
+
+.card { 
+    background: #fff; 
+    text-align: left;
+    transition: opacity 0.3s;
+} 
+
+.card img { 
+    width: 100%; 
+    aspect-ratio: 4/5;
+    object-fit: cover; 
+    border-radius: 0; 
+} 
+
+.card h3 { 
+    margin-top: 15px; 
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-transform: uppercase;
+} 
+
+.price { 
+    font-weight: 400; 
+    color: #000; 
+    font-size: 0.9rem;
+} 
+
+.old-price { 
+    text-decoration: line-through; 
+    color: #a4a4a4; 
+    margin-left: 10px;
+} 
+
+.badge { 
+    position: absolute; 
+    top: 10px; 
+    right: 10px; 
+    background: #000; 
+    color: #fff; 
+    padding: 4px 8px; 
+    font-size: 9px; 
+    font-weight: 700;
+    text-transform: uppercase;
+} 
+
+/* ===== SALE BANNER ===== */ 
+.sale-banner { 
+    position: relative; 
+    height: 600px; 
+    background: #000;
+    overflow: hidden;
+} 
+
+.sale-bg { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    opacity: 0.5;
+} 
+
+.sale-title { 
+    position: absolute; 
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 15vw; 
+    font-weight: 900; 
+    color: rgba(255,255,255,0.1); 
+    text-transform: uppercase;
+    pointer-events: none;
+} 
+
+.sale-overlay { 
+    position: absolute; 
+    inset: 0; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+} 
+
+.sale-box { 
+    background: #fff; 
+    padding: 60px; 
+    max-width: 450px; 
+    text-align: center;
+} 
+
+.sale-btn { 
+    display: inline-block; 
+    padding: 15px 45px; 
+    background: #000; 
+    color: #fff; 
+    font-weight: 600; 
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+} 
+
+/* ===== BUTTONS ===== */ 
+.btn.outline { 
+    display: inline-block; 
+    margin-top: 40px; 
+    padding: 12px 40px; 
+    border: 1px solid #000; 
+    color: #000; 
+    font-weight: 700; 
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); 
+} 
+
+.btn.outline:hover { 
+    background: #000; 
+    color: #fff; 
+} 
+
+/* CTA SECTION */ 
+.cta { 
+    background: #f9f9f9; 
+    padding: 150px 20px; 
+} 
+
+.cta-box { 
+    max-width: 600px; 
+    margin: 0 auto;
+} 
+
+.cta-box h2 { 
+    font-size: 3rem; 
+    font-weight: 800; 
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 20px;
+} 
+
+.cta-btn { 
+    background: #000; 
+    color: #fff; 
+    padding: 18px 50px; 
+    font-weight: 700; 
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    border-radius: 0;
+} 
+
+/* ===== CONTACT PAGE SPECIFICS ===== */
+
+/* Center the page title specifically for Contact */
+.page-title {
+    display: block;
+    text-align: center;
+    margin: 80px auto 40px;
+    font-size: 4rem; 
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    border-bottom: none; 
+}
+
+/* ===== FORM LAYOUT ===== */
+.sell-form {
+    max-width: 600px;
+    margin: 0 auto 100px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Input Fields */
+.sell-form input, 
+.sell-form textarea {
+    width: 100%;
+    padding: 18px 20px;
+    border: 1px solid #e5e5e5;
+    background: #fff;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+    transition: border-color 0.3s ease;
+    outline: none;
+}
+
+.sell-form input:focus, 
+.sell-form textarea:focus {
+    border-color: #000; 
+}
+
+.sell-form textarea {
+    height: 150px;
+    resize: none;
+    font-family: inherit;
+}
+
+/* Submit Button */
+.sell-form button {
+    background: #000;
+    color: #fff;
+    padding: 20px;
+    border: none;
+    font-size: 0.9rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+
+.sell-form button:hover {
+    background: #333;
+}
+
+.sell-form button:active {
+    transform: scale(0.98); 
+}
+
+/* Placeholder Styling */
+::placeholder {
+    color: #aaa;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+/* Responsive Scaling */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2.5rem;
+        margin-top: 50px;
+    }
+    
+    .sell-form {
+        padding: 0 30px;
+    }
+}
+
+/* ===== MARKETPLACE MAIN CONTENT ===== */
+
+main {
+    background-color: #ffffff;
+    padding: 60px 0;
+    width: 100%;
+    overflow-x: hidden; 
+}
+
+.products-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box; 
+}
+
+.page-title {
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin-bottom: 40px;
+    text-align: left;
+    border-bottom: 2px solid #111;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* ===== FIXED 3-COLUMN GRID ===== */
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 40px 30px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ===== PRODUCT CARD STYLING ===== */
+.card {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    width: 100%; 
+    min-width: 0;  
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img {
+    width: 100%;
+    aspect-ratio: 1 / 1; 
+    overflow: hidden;
+    background: #f4f4f4;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .card-img img {
+    transform: scale(1.05);
+}
+
+.card-info {
+    padding: 20px 0;
+    text-align: left;
+}
+
+.card-info h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    color: #111;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-info .price {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #111;
+    margin-bottom: 5px;
+}
+
+.card-info .category {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #888;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.card-info .description {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Styling the Buy Button */
+.btn-buy {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background: #000;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background 0.3s ease;
+    text-align: center;
+}
+
+.btn-buy:hover {
+    background: #333;
+    color: #fff;
+}
+
+/* ===== RESPONSIVE FIXES ===== */
+@media (max-width: 1024px) {
+    .products {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 600px) {
+    .products {
+        grid-template-columns: 1fr; 
+    }
+}
+
+/* ===== FOOTER ===== */ 
+footer { 
+    background: #000; 
+    color: #ffffff; 
+    padding: 80px 60px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+} 
+
+footer h3 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+.footer-links {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-links a {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #fff;
+    transition: opacity 0.3s ease;
+}
+
+.footer-links a:hover {
+    opacity: 0.6;
+}
+
+footer p {
+    font-size: 0.65rem; 
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    color: #777; 
+    margin-top: 20px;
+    border-top: 1px solid #222;
+    padding-top: 40px;
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+/* Ensure footer looks good on small screens */
+@media (max-width: 600px) {
+    footer { padding: 60px 20px; }
+    .footer-links { flex-direction: column; align-items: center; gap: 15px; }
+}
+
+
+/* ===== HERO STRUCTURE ===== */
+.sell-hero, .market-hero {
+    position: relative;
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; 
+    background: #000; 
+}
+
+/* Forces the HTML image to act like a background-cover */
+.hero-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: 1;
+}
+
+/* The Dark Tint (Overlay) */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); 
+    z-index: 2;
+}
+
+/* Ensures content sits on top of image and tint */
+.hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: #fff;
+}
+/* ===== SPECIFIC HEADING SIZES FOR SELL & MARKET ONLY ===== */
+.sell-hero .hero-content h1, 
+.market-hero .hero-content h1 {
+    font-size: 3rem; 
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    line-height: 1;
+}
+
+/* Adjust the sub-text size for these two pages only */
+.sell-hero .hero-content p, 
+.market-hero .hero-content p {
+    font-size: 1.1rem; 
+    letter-spacing: 3px;
+}
+
+/* Mobile override for these two pages only */
+@media (max-width: 768px) {
+    .sell-hero .hero-content h1, 
+    .market-hero .hero-content h1 {
+        font-size: 2.8rem;
+    }
+}
+
+/* ===== SELL FORM ADJUSTMENTS ===== */
+.sell-form h2 {
+    font-size: 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Label Styling - Clean & Bold */
+.sell-form label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+    color: #111;
+}
+
+/* File Upload Input Styling */
+.sell-form input[type="file"] {
+    border: 2px dashed #eee;
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+    background: #f9f9f9;
+    text-transform: none; 
+}
+
+.sell-form input[type="file"]:hover {
+    border-color: #000;
+}
+
+/* Number input specific styling */
+.sell-form input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.sell-form input[type="number"]::-webkit-outer-spin-button,
+.sell-form input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Adjust Section Padding for the Form */
+section:has(.sell-form) {
+    padding: 100px 20px;
+    background-color: #fff;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .sell-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .sell-form {
+        padding: 0 10px;
+    }
+}
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) { 
+    .navbar { padding: 20px; flex-direction: row; justify-content: space-between; } 
+    .nav-links { display: none; } 
+    .hero-content h1 { font-size: 3.5rem; } 
+    .sale-box { padding: 30px; margin: 20px; }
+}
+
+@media (max-width: 600px) {
+    .products {
+        grid-template-columns: 1fr;
+    }
+}

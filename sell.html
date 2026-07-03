@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sell Your Item | Campus Thrift</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar">
+    	<div class="logo">
+  	<img src="thriftlogo.png" alt="CampusThrift Logo">
+	</div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="items.html">Marketplace</a></li>
+        <li><a href="sell.html"class="active">Sell</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+
+
+
+<section class="hero sell-hero">
+    <img src="https://i.pinimg.com/1200x/d1/71/c3/d171c3d36f815f88702eabe3137e9489.jpg" alt="Background" class="hero-bg-img">
+    <div class="hero-overlay"></div> <div class="hero-content">
+        <h1>Sell Your Pre-loved Items</h1>
+        <p>Quickly list your items and reach your campus community</p>
+    </div>
+</section>
+
+<section>
+    <form id="sellForm" class="sell-form">
+        <h2>List Your Item</h2>
+        <label for="name">Item Name</label>
+        <input type="text" id="name" placeholder="Item Name" required>
+
+        <label for="category">Category</label>
+        <input type="text" id="category" placeholder="Clothing, Electronics, etc." required>
+
+        <label for="price">Price (Rs)</label>
+        <input type="number" id="price" placeholder="Price" required>
+
+        <label for="description">Description</label>
+        <textarea id="description" placeholder="Describe your item" required></textarea>
+
+        <label for="image">Image</label>
+        <input type="file" id="image" accept="image/*" required>
+
+        <button type="submit">Add Item</button>
+    </form>
+</section>
+
+<footer>
+    <h3>CampusThrift</h3>
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="items.html">Marketplace</a>
+        <a href="sell.html">Sell</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <p>© 2026 Campus Thrift Store</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
