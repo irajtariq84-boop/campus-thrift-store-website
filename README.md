@@ -1,70 +1,59 @@
-Project Title: Campus Thrift Store
-Course: AICT (CS181)
-Semester Project
+# Campus Thrift Store Website
 
---------------------------------------------------
+A responsive thrift clothing marketplace website developed as an academic project. The platform enables users to browse, buy, and sell pre-owned clothing through a clean and user-friendly interface.
 
-Project Description:
-Campus Thrift Store is a frontend-based web application designed to allow
-students to buy and sell second-hand items within their campus community.
-The website provides an interactive marketplace where users can browse
-items and a sell page where students can list their own products.
+## Live Demo
 
-The project is developed using HTML, CSS, and JavaScript only, focusing on
-core web development concepts such as page structure, styling, DOM
-manipulation, form handling, client-side validation, and interactive UI
-features.
+🌐 https://campusthriftwebsite.netlify.app
 
---------------------------------------------------
+## Features
 
-Technologies Used:
+- Browse available thrift clothing
+- Sell clothing through a dedicated form
+- Contact page
+- Responsive user interface
+- Clean navigation between pages
+
+## Technologies Used
+
 - HTML5
 - CSS3
 - JavaScript
 
---------------------------------------------------
+## Project Structure
 
-Website Pages:
-1. Home Page (index.html)
-   - Displays hero section, categories, and featured items.
+```
+Campus-Thrift-Store-Website
+│
+├── index.html
+├── items.html
+├── sell.html
+├── contact.html
+├── style.css
+├── script.js
+├── thriftlogo.png
+├── Screenshots/
+├── AICT Final Project Report.pdf
+├── Campus Thrift Store Web Application Demo.mp4
+└── Sitemap.pdf
+```
 
-2. Marketplace Page (items.html)
-   - Shows all available items using dynamic product cards.
+## Screenshots
 
-3. Sell Page (sell.html)
-   - Allows users to upload item details using a form.
-   - Includes form validation and image handling.
+Project screenshots are available inside the **Screenshots** folder.
 
-4. Contact Page (contact.html)
-   - Provides a contact form for user queries and item inquiries.
+## Academic Information
 
---------------------------------------------------
+**Course:** AICT (Application of Information & Communication Technology)
 
-How to Run the Project:
-1. Download and extract the project folder.
-2. Open the file named "index.html" in any modern web browser
-3. Use the navigation bar to explore all pages of the website.
+## Future Improvements
 
---------------------------------------------------
+- User authentication
+- Shopping cart
+- Product filtering
+- Payment integration
+- Backend database support
 
-Important Notes:
-- Items added through the Sell page are stored using the browser�s
-  localStorage.
-- localStorage is browser- and device-specific, so user-added items
-  will only appear on the same system.
-- Sample items are preloaded in the JavaScript file to ensure consistent
-  display during demonstration and evaluation.
-- No backend or database is used in this project as per frontend-only
-  requirements.
+## Author
 
---------------------------------------------------
-
-Submission Includes:
-- Complete HTML, CSS, and JavaScript source code
-- Sitemap / Website Structure
-- Example screenshots of all pages and features
-- Demo video showing navigation and functionality
-- Project report in PDF format
-
---------------------------------------------------
-
+**Iraj Tariq**
